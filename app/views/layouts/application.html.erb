@@ -16,7 +16,13 @@
       <div class="container">
         <h1 class="title is-1">Top Movies From IMDB</h1>
       </div>
-    </section>
+
     <%= yield %>
+    <% if controller_name == 'home' %>
+      <p>There's no place like home</p>
+    <% else %>
+      <%= render partial: 'common/footer' %>
+    <% end %>
+    </section>
   </body>
 </html>
